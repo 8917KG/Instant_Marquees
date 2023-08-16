@@ -2,6 +2,9 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../../src/styling/Footer.css';
 
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 export function Footer(props) {
   return (
     <footer className='footer'>
@@ -15,19 +18,43 @@ export function Footer(props) {
           <Col className="footer-column">
             <h5>Categories</h5>
             <ul>
-              <li>Category 1</li>
-              <li>Category 2</li>
-              <li>Category 3</li>
-              {/* Add more categories */}
+              <li><Link className='nav-link' to="/about">About Us</Link></li>
+              <li><Link className='nav-link' to="/contact">Contacts</Link></li>
+              <li><Link className='nav-link' to="/contact">Enquiry</Link></li>
+              <li><Link className='nav-link' to="/diy-marquees">DIY Marquees</Link></li>
+              <li><Link className='nav-link' to="/popup-marquees">Pop-Up Marquees</Link></li>
+              <li><Link className='nav-link' to="/structure-marquees">Structure Marquees</Link></li>
+              <li><Link className='nav-link' to="/umbrellas">Umbrellas</Link></li>
+              <li><Link className='nav-link' to="/accessories">Accessories</Link></li>
             </ul>
           </Col>
           <Col className="footer-column">
             <h5>Find Us in Socials</h5>
-            <p>Social media links and information.</p>
+            <div className="social-icons">
+              <a href="https://www.facebook.com/InstantMarqueesandUmbrellas/" className="social-icon">
+                <FontAwesomeIcon icon={faFacebook} />
+              </a>
+              <a href="https://www.instagram.com/marqueesmelbourne/" className="social-icon">
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+            </div>
           </Col>
           <Col className="footer-column">
             <h5>Gallery</h5>
-            <p>Gallery images and information.</p>
+            <div className="gallery-images">
+              <div className="gallery-item">
+                <img src="./images/default.png" alt="Gallery 1" />
+                <p className="gallery-subheading">Time of image</p>
+              </div>
+              <div className="gallery-item">
+                <img src="./images/default.png" alt="Gallery 2" />
+                <p className="gallery-subheading">Time of image</p>
+              </div>
+              <div className="gallery-item">
+                <img src="./images/default.png" alt="Gallery 3" />
+                <p className="gallery-subheading"> Time of image</p>
+              </div>
+            </div>
           </Col>
         </Row>
         <div className='container-fluid'>
